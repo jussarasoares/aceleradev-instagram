@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
+:root {
+	--dark-color: #000;
+	--light-color: #fff;
+	--background-color: #fafafa;
+}
+
 *,
 *:after,
 *:before {
@@ -13,13 +19,13 @@ html {
 body {
 	padding-top: 56px;
 	font-family: 'Open Sans', sans-serif;
-	background-color: #fafafa;
-	color: #000000;
+	background-color: var(--background-color);
+	color: var(--dark-color);
 }
 
 a {
 	text-decoration: none;
-	color: #000000;
+	color: var(--dark-color);
 	font-weight: bold;
 }
 
@@ -35,15 +41,9 @@ button {
 	margin: 0 auto;
 }
 
-@media screen and (min-width: 728px) {
-	.container {
-		width: 728px;
-	}
-}
-
 .topbar {
 	backface-visibility: hidden;
-	background-color: white;
+	background-color: var(--light-color);
 	left: 0;
 	padding: 8px 16px;
 	position: fixed;
@@ -78,7 +78,7 @@ button {
 
 .user__thumb__wrapper {
 	border-radius: 100%;
-	border: 2px solid white;
+	border: 2px solid var(--light-color);
 	display: inline-block;
 	overflow: hidden;
 }
@@ -126,14 +126,8 @@ button {
 	padding: 16px;
 }
 
-@media screen and (min-width: 728px) {
-	.cards {
-		padding: 16px 0;
-	}
-}
-
 .card {
-	background-color: white;
+	background-color: var(--light-color);
 	border-radius: 10px;
 	border: 1px solid rgba(0, 0, 0, .1);
 	display: flex;
@@ -161,7 +155,7 @@ button {
 }
 
 .card__header .user__name {
-	color: black;
+	color: var(--dark-color);
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-decoration: none;
@@ -220,4 +214,13 @@ button {
 	height: 30px;
 	width: 30px;
 	margin-right: 8px;
+}
+
+@media screen and (min-width: 728px) {
+	.container {
+		width: 728px;
+	}
+	.cards {
+		padding: 16px 0;
+	}
 }
